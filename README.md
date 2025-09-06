@@ -1,14 +1,14 @@
 # Ramsey vs. Hahn Echo on Quantum Hardware
 
-This project demonstrates how **Ramsey interferometry** and the **Hahn echo sequence** can be used to probe quantum dephasing times (\(T_2^*\) and \(T_{2,\mathrm{echo}}\)).  
+This project demonstrates how **Ramsey interferometry** and the **Hahn echo sequence** can be used to probe quantum dephasing times (T₂* and T₂_echo).  
 We implement both experiments in Qiskit, run them on noisy simulation and on real IBM Quantum hardware (via **SamplerV2**, one batched job), and compare the results.
 
 ---
 
 ## What is Quantum Echo?
 
-- **Ramsey sequence** measures how quickly a qubit loses phase coherence due to noise. The signal decays with characteristic time \(T_2^*\).  
-- **Hahn echo** inserts an extra refocusing pulse that cancels out slow noise. The echo signal decays more slowly, with a longer effective \(T_{2,\mathrm{echo}}\).
+- **Ramsey sequence** measures how quickly a qubit loses phase coherence due to noise. The signal decays with characteristic time T₂*.  
+- **Hahn echo** inserts an extra refocusing pulse that cancels out slow noise. The echo signal decays more slowly, with a longer effective T₂_echo.
 
 This is called a **quantum echo**: the qubit “forgets” some noise, briefly rephases, and shows a longer lifetime. It is one of the simplest **dynamical decoupling** techniques in quantum information.
 
@@ -19,7 +19,7 @@ This is called a **quantum echo**: the qubit “forgets” some noise, briefly r
 ### Simulation (Aer, with relaxation noise)
 - The **Ramsey curve** decays relatively quickly.  
 - The **Hahn echo curve** decays more slowly, showing the expected extension of coherence time.  
-- Fitted values confirm \(T_{2,\mathrm{echo}} > T_2^*\).
+- Fitted values confirm T₂_echo > T₂*.
 
 ### Hardware (IBM Quantum, SamplerV2)
 - The same circuits were run on a real device in a **single Sampler job**.  
